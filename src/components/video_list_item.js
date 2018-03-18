@@ -2,7 +2,7 @@ import React from 'react';
 
 // Intended to show a single video (thumbnail, list item).
 const VideoListItem = ({video}) => {
-  const imageUrl = video.snippet.thumbnail.default.url;
+  const imageUrl = video.snippet.thumbnails.default.url;
   return (
     <li className="list-group-item">
       <div className="video-list media">
@@ -11,7 +11,7 @@ const VideoListItem = ({video}) => {
         </div>
 
         <div className="media-body">
-          <div className="media-heading"{video.snippet.title}></div>
+          <div className="media-heading">{video.snippet.title}</div>
         </div>
       </div>
     </li>
