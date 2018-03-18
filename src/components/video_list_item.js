@@ -1,8 +1,21 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 // Intended to show a single video (thumbnail, list item).
-const VideoListItem = (props) => {
-  return <li>Video</li>
-}
+const VideoListItem = ({video}) => {
+  consst imageUrl = video.snippet.thumbnail.default.url;
+  return (
+    <li className="list-group-item">
+      <div className="video-list media">
+        <div className="media-left">
+          <img className="media-object" src={imageUrl} />
+        </div>
+
+        <div className="media-body">
+          <div className="media-heading"{video.snippet.title}></div>
+        </div>
+      </div>
+    </li>
+  );
+};
 
 export default VideoListItem;
